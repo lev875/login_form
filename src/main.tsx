@@ -11,6 +11,8 @@ import Success from "./components/Success";
 import NotFound from "./components/404"
 import Start from "./components/Start";
 
+const pathPrefix = process.env["PATH_PREFIX"] ?? ""
+
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route element={ <App/> } errorElement={ <NotFound/> } >
@@ -20,7 +22,10 @@ const router = createBrowserRouter(
       <Route path="/restore_password" element={ <SignUp/> }/>
       <Route path="/success" element={ <Success/> }/>
     </Route>
-  )
+  ),
+  {
+    basename: pathPrefix
+  }
 )
 
 createRoot(document.getElementById("root")).render(

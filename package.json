@@ -7,10 +7,12 @@
   "scripts": {
     "dev": "parcel src/index.html",
     "build": "parcel build src/index.html",
-    "clean": "rm -rf dist .parcel-cache"
+    "clean": "rm -rf dist .parcel-cache",
+    "deploy": "yarn clean && yarn build --public-url $PATH_PREFIX"
   },
   "devDependencies": {
     "@parcel/transformer-svg-react": "^2.7.0",
+    "@types/node": "^18.11.9",
     "@types/react": "^18.0.25",
     "@types/react-dom": "^18.0.8",
     "parcel": "^2.7.0",
