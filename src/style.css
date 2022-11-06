@@ -1,0 +1,48 @@
+:root {
+  --main-background-color: #5a69b1;
+  --secondary-background-color: #a4b0e6;
+  --accent-color: #2c264d;
+  --text-color: white;
+  --link-color: #7313c7;
+  --error-color: #a4263f;
+}
+
+body {
+  height: 100vh;
+  min-height: fit-content;
+  margin: 0;
+  background-color: var(--main-background-color);
+  color: var(--text-color);
+}
+
+button {
+  font-size: x-large;
+  padding: 1em;
+  background-color: var(--secondary-background-color);
+  border-radius: 0.5rem;
+  border-style: solid;
+  border-color: var(--accent-color);
+  cursor: pointer;
+}
+
+span {
+  font-size: x-large;
+}
+
+h1 {
+  text-align: center;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+@media screen and (max-height: 480px) {
+  body {
+    height: 100%;
+  }
+}

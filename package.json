@@ -1,0 +1,26 @@
+{
+  "name": "login_form",
+  "version": "1.0.0",
+  "author": "Lev Kriukov",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html",
+    "clean": "rm -rf dist .parcel-cache"
+  },
+  "devDependencies": {
+    "@parcel/transformer-svg-react": "^2.7.0",
+    "@types/react": "^18.0.25",
+    "@types/react-dom": "^18.0.8",
+    "parcel": "^2.7.0",
+    "process": "^0.11.10",
+    "typescript": "^4.8.4",
+    "typescript-plugin-css-modules": "^3.4.0"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.4.3"
+  }
+}

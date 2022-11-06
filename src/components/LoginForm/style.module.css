@@ -1,0 +1,172 @@
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  background-color: var(--secondary-background-color);
+  border-color: var(--accent-color);
+  font-size: xx-large;
+  border-radius: 0;
+  border-style: solid;
+  border-top-width: 0.3rem;
+  border-bottom-width: 0.3rem;
+  border-left-width: 0;
+  border-right-width: 0;
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.form > div {
+  flex-direction: column;
+  display: flex;
+}
+
+.form a {
+  color: var(--link-color);
+  background-color: var(--secondary-background-color);
+  text-decoration: none;
+}
+
+.form a:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+.form a:focus-visible {
+  text-decoration: underline;
+  border: none;
+  outline: none;
+}
+
+.form label {
+  margin-bottom: 0.25em;
+  color: var(--accent-color);
+}
+
+.form input {
+  font-size: xx-large;
+  color: var(--text-color);
+  border-color: var(--accent-color);
+  border-radius: 0.5rem;
+  padding: 0.2em;
+  background-color: var(--main-background-color);
+  text-align: center;
+}
+
+.form input:focus-visible {
+  outline-style: solid;
+  outline-width: 0.17em;
+  outline-color: var(--accent-color);
+  border-color: transparent;
+}
+
+.form input[type="submit"] {
+  cursor: pointer;
+}
+
+.form input[type="submit"]:hover:enabled,
+.form input[type="submit"]:focus-visible:enabled {
+  filter: opacity(75%);
+}
+
+.form input[type="submit"]:disabled {
+  filter: brightness(0.75);
+  cursor: default;
+}
+
+.form .passwordInput {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: center;
+}
+
+.passwordInput input {
+  flex-grow: 1;
+  width: 100%;
+}
+
+.passwordInput svg {
+  color: var(--accent-color);
+  height: 1.25em;
+  width: 1.25em;
+  position: absolute;
+  right: 0.35em;
+}
+
+.passwordInput svg:focus, .passwordInput svg:focus-visible {
+  outline-color: var(--accent-color);
+  outline-style: solid;
+  outline-width: 0.12em;
+  border-radius: 33%;
+}
+
+.form .signUpBlock {
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.error {
+  color: var(--error-color);
+  font-weight: bold;
+  min-height: 1.166em;
+  height: fit-content;
+  opacity: 0;
+}
+
+.shownError {
+  animation-name: show;
+  animation-duration: 0.5s;
+  opacity: 1;
+}
+
+@keyframes show {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.spinner {
+  align-self: center;
+  border-style: solid;
+  border-radius: 50%;
+  border-width: 1.5em;
+  border-color: var(--main-background-color);
+  border-top-color: var(--accent-color);
+  width: 3em;
+  height: 3em;
+  animation-name: spin;
+  animation-duration: 0.75s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@media only screen and (min-width: 768px) {
+
+  .form {
+    width: 500px;
+    font-size: x-large;
+    padding: 2em;
+    border-width: 0.3rem;
+    border-radius: 0.5rem;
+    border-style: solid;
+  }
+
+  .form input {
+    font-size: x-large;
+  }
+
+}
+
+@media only screen and (max-width: 480px) {
+  .form {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
